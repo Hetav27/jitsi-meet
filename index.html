@@ -17,7 +17,12 @@
           configOverwrite: {
             enableRecording: true, // Enable recording feature
             startWithVideoMuted: false,
-            startWithAudioMuted: false
+            startWithAudioMuted: false,
+            useStunTurn: true,  // Ensures WebRTC uses STUN/TURN for peer-to-peer connections
+            p2p: {
+              enabled: true,  // Enable WebRTC peer-to-peer mode
+              disableH264: false // Allow WebRTC to use H264 codec
+            }
           },
           interfaceConfigOverwrite: {
             TOOLBAR_BUTTONS: [
